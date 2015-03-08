@@ -2,6 +2,8 @@
 
 A docker image of PhantomJS 2.0 / GhostDriver that's compatible with selenium grid hub 
 
+This version of PhantomJS has been patched to fix ghostdriver/#394
+
 ## Dockerfile
 
 [`akeem/selenium-node-phantomjs` Dockerfile](https://github.com/AkeemMcLennon/docker-selenium-node-phantomjs/Dockerfile)
