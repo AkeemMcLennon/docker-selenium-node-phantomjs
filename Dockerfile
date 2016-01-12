@@ -18,7 +18,7 @@ RUN apt-get -y update \
                             libpng-dev libjpeg-dev \
                             git-core libicu52 \
                             curl \
-      && curl -L https://github.com/AkeemMcLennon/phantomjs/archive/2.0.0.tar.gz | tar --strip-components=1 -xzf - \
+      && curl -L https://github.com/AkeemMcLennon/phantomjs/archive/master.tar.gz | tar --strip-components=1 -xzf - \
       && ./build.sh --confirm \
       && ln -s /usr/local/phantomjs/bin/phantomjs /usr/bin/phantomjs \
       && ( [ "$CLEAN" -ne 0 ] && ( \
