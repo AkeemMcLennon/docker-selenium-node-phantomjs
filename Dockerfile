@@ -7,7 +7,7 @@ RUN mkdir /usr/local/phantomjs
 
 WORKDIR /usr/local/phantomjs
 
-ARG CLEAN=0
+ARG CLEAN=1
 
 RUN apt-get -y update \
       && apt-get -y dist-upgrade \
