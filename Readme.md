@@ -20,3 +20,8 @@ Once the hub is up and running will want to launch nodes that can run tests. You
 
 ```
 $ docker run -d --link selenium-hub:hub akeem/selenium-node-phantomjs
+```
+
+Use PHANTOMJS_OPTS environment variable to pass additional command line options to the phantomjs node. For example to ignore SSL errors:
+```
+$ docker run -d -e "PHANTOMJS_OPTS=--ignore-ssl-errors=true" --link selenium-hub:hub akeem/selenium-node-phantomjs
