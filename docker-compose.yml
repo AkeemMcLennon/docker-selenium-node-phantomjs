@@ -1,0 +1,27 @@
+tester:
+  build: ./test
+  command: py.test test.py
+  links:
+    - phantomjs
+    - selenium
+
+selenium:
+  image: selenium/hub
+  detach: true
+  links:
+   - httpbin
+  ports:
+    - "4444"
+
+
+phantomjs:
+  build: ./
+  links:
+   - selenium:hub
+   - httpbin
+
+httpbin:
+  image: vimagick/httpbin
+  restart: always
+  ports:
+    - "80"
