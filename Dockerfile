@@ -25,6 +25,6 @@ RUN sh deploy/docker-build.sh
 RUN cp /root/build/src/bin/phantomjs /usr/bin/ 
 RUN apt-get autoremove -y
 RUN apt-get clean all
-ADD join-hub.sh /usr/local/bin/
+ADD join-hub.sh /usr/local/phantomjs/
 
 ENTRYPOINT [ "sh", "-c", "/usr/local/phantomjs/join-hub.sh" ]
